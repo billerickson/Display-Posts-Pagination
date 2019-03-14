@@ -43,14 +43,20 @@ function be_dps_pagination_links( $output, $atts, $listing ) {
 		'next_text' => 'Next',
 	);
 
+	$nav_output = '';
 	$navigation = paginate_links( apply_filters( 'display_posts_shortcode_paginate_links', $args, $atts ) );
 	if( $navigation ) {
-    	$output .= '<nav class="display-posts-pagination" role="navigation">';
-        	$output .= '<h2 class="screen-reader-text">Navigation</h2>';
-        	$output .= '<div class="nav-links">' . $navigation . '</div>';
-		$output .= '</nav>';
+    	$nav_output .= '<nav class="display-posts-pagination" role="navigation">';
+        	$nav_output .= '<h2 class="screen-reader-text">Navigation</h2>';
+        	$nav_output .= '<div class="nav-links">' . $navigation . '</div>';
+		$nav_output .= '</nav>';
 	}
 
+	if( !empty( $atts['pagination_inside'] ) && filter_var( $atts['pagination_inside'], FILTER_VALIDATE_BOOLEAN ) )
+		$output = $nav_output . $output;
+	else
+		$output .= $nav_output;
+		
 	return $output;
 }
 add_filter( 'display_posts_shortcode_wrapper_close', 'be_dps_pagination_links', 10, 3 );

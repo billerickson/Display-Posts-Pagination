@@ -21,7 +21,7 @@
  *
  */
 function be_dps_pagination_links( $output, $atts, $listing ) {
-	if( empty( $atts['pagination'] ) )
+	if( empty( $atts['pagination'] ) || !empty( $atts['offset'] ) )
 		return $output;
 
 	global $wp;
@@ -56,7 +56,7 @@ function be_dps_pagination_links( $output, $atts, $listing ) {
 		$output = $nav_output . $output;
 	else
 		$output .= $nav_output;
-		
+
 	return $output;
 }
 add_filter( 'display_posts_shortcode_wrapper_close', 'be_dps_pagination_links', 10, 3 );

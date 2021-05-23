@@ -29,3 +29,10 @@ If you have more than one `[display-posts]` listing on a page, use increasing in
 If you're a developer, you can use the following filters to customize the markup:
 
 * `display_posts_shortcode_paginate_links` - Customize the arguments passed to `paginate_links()`
+
+## Installation
+
+1. Download the plugin in zip format [here](https://github.com/billerickson/Display-Posts-Pagination/archive/refs/heads/master.zip)
+2. Go to your WordPress, and from the admin portal go to Plugins
+3. Once in the Plugins section, go to Add New, then click on Upload Plugin and finally select the zip downloaded in step 1
+4. Last step, activate the plugin

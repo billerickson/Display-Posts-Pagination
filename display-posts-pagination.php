@@ -6,6 +6,7 @@
  * Version: 1.0.0
  * Author: Bill Erickson
  * Author URI: https://www.billerickson.net
+ * Domain Path: /languages
  *
  * This program is free software; you can redistribute it and/or modify it under the terms of the GNU
  * General Public License version 2, as published by the Free Software Foundation.  You may NOT assume
@@ -39,8 +40,8 @@ function be_dps_pagination_links( $output, $atts, $listing ) {
 		'format'    => $format,
 		'current'   => $current,
 		'total'     => $listing->max_num_pages,
-		'prev_text' => 'Previous',
-		'next_text' => 'Next',
+		'prev_text' => __( 'Previous' ),
+		'next_text' => __( 'Next' ),
 	);
 
 	$nav_output = '';

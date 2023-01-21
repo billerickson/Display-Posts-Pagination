@@ -1,6 +1,3 @@
-# Blank WordPress Pot
-# Copyright 2014 ...
-# This file is distributed under the GNU General Public License v3 or later.
 msgid ""
 msgstr ""
 "Project-Id-Version: Display Posts Pagination v1.0.0\n"
